@@ -2,14 +2,13 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <groupId>a-project</groupId>
-    <artifactId>a-project_2.10</artifactId>
-    <packaging>jar</packaging>
-    <description>A Project</description>
+    <artifactId>performance-optimization</artifactId>
+    <packaging>war</packaging>
+    <description>performance-optimization</description>
     <version>0.1</version>
-    <name>A Project</name>
-    <organization>
-        <name>a-project</name>
-    </organization>
+    <name>performance-optimization</name>
+
+
     <dependencies>
         <dependency>
             <groupId>org.scala-lang</groupId>
@@ -22,5 +21,52 @@
             <version>2.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>net.databinder.dispatch</groupId>
+            <artifactId>dispatch-core_2.10</artifactId>
+            <version>0.9.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scalatra</groupId>
+            <artifactId>scalatra_2.10</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatra</groupId>
+            <artifactId>scalatra-scalate_2.10</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatra</groupId>
+            <artifactId>scalatra-specs2_2.10</artifactId>
+            <version>2.2.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.6</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty.orbit</groupId>
+            <artifactId>javax.servlet</artifactId>
+            <version>3.0.0.v201112011016</version>
+        </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>SonatypeOSSSnapshots</id>
+            <name>Sonatype OSS Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>AkkaRepo</id>
+            <name>Akka Repo</name>
+            <url>http://repo.akka.io/repository/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 </project>
